@@ -1,12 +1,13 @@
 package com.urbanproduction.contact.Contact;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IContactService {
 
     List<Contact> getAllTheContacts();
-    Contact getContact(int id);
-    void  saveContact(Contact contact);
-    void updateContact(Contact contact);
+    Optional<Contact> getContact(int id);
+    Contact saveContact(Contact contact);
+    Contact updateContact(Contact contact);
     void deleteContact(int id);
 }
